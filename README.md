@@ -8,12 +8,15 @@ Project Overview:
 This project implements a platoon-based vehicle system using ESP32, NRF24L01, and ultrasonic sensors. It consists of a Header Vehicle (Leader) that controls the Slave Vehicles (Followers). The Header Vehicle is controlled via a web interface(for prototype), and the Slave Vehicles autonomously follow based on distance measurements using an ultrasonic sensor.
 
 Features:
+
 Header Vehicle (Leader):
+
 Creates a Wi-Fi access point for control via a web interface.
 Sends movement commands (Forward, Backward, Left, Right, Stop) to Slave 1 using NRF24L01.
 Web-based control with touch-friendly UI.
 
 Slave Vehicles (Followers):
+
 Receive movement commands from the Header Vehicle.
 Adjust speed dynamically based on distance from the previous vehicle using an ultrasonic sensor.
 Stop automatically if the leader vehicle stops or if there is no signal.
